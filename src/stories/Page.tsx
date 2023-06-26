@@ -1,14 +1,15 @@
-import React from 'react';
+import { FC, useState } from 'react'
 
-import { Header } from './Header';
-import './page.css';
+import { Header } from './Header'
+
+import './page.css'
 
 type User = {
-  name: string;
-};
+  name: string
+}
 
-export const Page: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
+export const Page: FC = () => {
+  const [user, setUser] = useState<User>()
 
   return (
     <article>
@@ -36,7 +37,7 @@ export const Page: React.FC = () => {
         <ul>
           <li>
             Use a higher-level connected component. Storybook helps you compose such data from the
-            "args" of child component stories
+            args of child component stories
           </li>
           <li>
             Assemble data in the page component from your services. You can mock these services out
@@ -69,5 +70,5 @@ export const Page: React.FC = () => {
         </div>
       </section>
     </article>
-  );
-};
+  )
+}
